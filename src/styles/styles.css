@@ -1,0 +1,32 @@
+
+.wrapper{
+    display: flex;
+}
+
+#one{
+    display: flex;
+    width: 50vw;
+    height: 20px;
+    border: 1px cadetblue solid;
+    
+}
+#two{
+    display: flex;
+    width: 50vw;
+    height: 20px;
+    border: 1px darkorchid solid;
+
+}
+
+#container {
+    display: flex;
+    min-height: 1500px;
+  }
+  
+  #audrey {
+    background-color: purple;
+    color: snow;
+    min-height: 100px;
+    width: 50px;
+    position: fixed;
+  }
