@@ -27,18 +27,47 @@
 
 //Window Powers Activate!**
 
+let allPowers = document.querySelectorAll('powerList');
 let activateFlight = document.getElementById('flight');
+let activateMind = document.getElementById('mindreading');
+let activateXray = document.getElementById('xray');
 
 document.querySelector("#activate-flight").addEventListener('click', (e) => {
     flightHandlerFunction();
 });
+document.querySelector("#activate-mindreading").addEventListener('click', (e) => {
+    mindHandlerFunction();
+});
+document.querySelector("#activate-xray").addEventListener('click', (e) => {
+    xRayHandlerFunction();
+});
+document.querySelector("#activate-all").addEventListener('click', (e) => {
+    activateAllPowers();
+});
 
 function flightHandlerFunction(){
     if(activateFlight.className == 'power disabled'){
-        activateFlight.classList.toggle('enabled');
+        activateFlight.classList = 'power enabled';
     }else if(activateFlight.className == 'power enabled'){
-        activateFlight.classList.toggle('disabled');
+        activateFlight.classList = 'power disabled';
     }
+}
+function mindHandlerFunction(){
+    if(activateMind.className == 'power disabled'){
+        activateMind.classList = 'power enabled';
+    }else if(activateMind.className == 'power enabled'){
+        activateMind.classList = 'power disabled';
+    }
+}
+function xRayHandlerFunction(){
+    if(activateXray.className == 'power disabled'){
+        activateXray.classList = 'power enabled';
+    }else if(activateXray.className == 'power enabled'){
+        activateXray.classList = 'power disabled';
+    }
+}
+function activateAllPowers(){
+    allPowers.classList = 'power enabled';
 }
 
 
