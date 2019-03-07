@@ -1,4 +1,4 @@
-
+/* 
 .wrapper{
     display: flex;
 }
@@ -29,4 +29,12 @@
     min-height: 100px;
     width: 50px;
     position: fixed;
-  }
+  } */
+  .disabled {
+    background-color: gray;
+}
+
+.enabled {
+    background-color: fuchsia;
+    color: goldenrod;
+}
