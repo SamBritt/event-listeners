@@ -32,7 +32,8 @@
 let activateFlight = document.getElementById('flight');
 let activateMind = document.getElementById('mindreading');
 let activateXray = document.getElementById('xray');
-let allPowers = document.querySelectorAll('#powerList');
+let allPowers = document.querySelector('#powerList');
+let allPowersList = allPowers.querySelectorAll('section');
 
 document.querySelector("#activate-flight").addEventListener('click', (e) => {
     flightHandlerFunction();
@@ -73,13 +74,14 @@ function xRayHandlerFunction(){
     }
 }
 function activateAllPowers(){
-   for(let i = 0; i < allPowers.length; i++){
-       allPowers[i].className = 'power enabled';
+   for(let i = 0; i < allPowersList.length; i++){
+    // console.log(allPowersList[i].classList = 'power enabled');
+    allPowersList[i].classList = 'power enabled';
    }
 }
 function deactivateAllPowers(){
-    for(let i = 0; i < allPowers.length; i++){
-        allPowers[i].classList = 'power disabled';
+    for(let i = 0; i < allPowersList.length; i++){
+        allPowersList[i].classList = 'power disabled';
     }
  }
 
