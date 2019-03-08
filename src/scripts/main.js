@@ -27,10 +27,12 @@
 
 //Window Powers Activate!**
 
-let allPowers = document.querySelectorAll('powerList');
+
+// let childrenOfPower = allPowers.children;
 let activateFlight = document.getElementById('flight');
 let activateMind = document.getElementById('mindreading');
 let activateXray = document.getElementById('xray');
+let allPowers = document.querySelectorAll('#powerList');
 
 document.querySelector("#activate-flight").addEventListener('click', (e) => {
     flightHandlerFunction();
@@ -44,6 +46,10 @@ document.querySelector("#activate-xray").addEventListener('click', (e) => {
 document.querySelector("#activate-all").addEventListener('click', (e) => {
     activateAllPowers();
 });
+document.querySelector("#deactivate-all").addEventListener('click', (e) => {
+    deactivateAllPowers();
+});
+
 
 function flightHandlerFunction(){
     if(activateFlight.className == 'power disabled'){
@@ -67,7 +73,13 @@ function xRayHandlerFunction(){
     }
 }
 function activateAllPowers(){
-    allPowers.classList = 'power enabled';
+   for(let i = 0; i < allPowers.length; i++){
+       allPowers[i].className = 'power enabled';
+   }
 }
-
+function deactivateAllPowers(){
+    for(let i = 0; i < allPowers.length; i++){
+        allPowers[i].classList = 'power disabled';
+    }
+ }
 
